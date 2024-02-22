@@ -28,5 +28,8 @@
   },
   "peerDependencies": {
     "koishi": "^4.17.0-beta.4"
+  },
+  "koishi": {
+    "preview": true
   }
 }
