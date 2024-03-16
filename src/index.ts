@@ -162,12 +162,12 @@ export function apply(ctx: Context, config: Config) {
     try {
       if (fs.existsSync(contextPath)) {
         fs.unlinkSync(contextPath); // 尝试删除文件以重置上下文
-        console.log(`上下文成功重置: ${contextPath}`);
+        logger.debug(`上下文成功重置: ${contextPath}`);
       } else {
-        console.log(`未找到上下文文件: ${contextPath}`);
+        logger.debug(`未找到上下文文件: ${contextPath}`);
       }
     } catch (error) {
-      console.error(`重置上下文时发生错误:`, error);
+      logger.error(`重置上下文时发生错误:`, error);
     }
   }
 
